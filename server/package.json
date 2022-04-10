@@ -1,0 +1,28 @@
+{
+  "name": "scopio-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Edson Boldrini",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts --respawn --transpileOnly --ignore-watch node_modules --no-notify",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/jest": "^27.4.1",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3"
+  }
+}
