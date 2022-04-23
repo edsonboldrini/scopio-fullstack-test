@@ -1,11 +1,13 @@
-import express, { response } from 'express'
+import { port, env } from './config/environment';
+import app from './app';
 
-const app = express()
+const start = async () => {
+  try {
+    await app.listen(port);    
+    console.log(`🚀 Server started on http://localhost:${port}`);    
+  } catch {
+    console.log('Not able to run GraphQL server');
+  }
+};
 
-app.get('/', (request, response) => {
-  return response.json({ message: 'ok' })
-})
-
-app.listen(3000, ()=>{
-  return console.log('Server started on http://localhost:3000')
-})
+start();

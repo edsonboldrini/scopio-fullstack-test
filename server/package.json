@@ -11,8 +11,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "@graphql-tools/schema": "^8.3.7",
     "@types/jest": "^27.4.1",
-    "express": "^4.17.3"
+    "apollo-server-express": "^3.6.7",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "graphql": "^16.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
