@@ -5,7 +5,8 @@ import fs from 'fs';
 type Environment = "dev" | "test" | "staging" | "prod" 
 
 class Env {
-  
+  port: number;
+
   private dotEnvDefault = '.env';  
 
   private requiredKeys = [
@@ -17,7 +18,6 @@ class Env {
   }
 
   init(){
-
     if (!fs.existsSync(this.dotEnvDefault)) {
       throw new Error("Please add a .env file to the root directory")
     }
@@ -56,6 +56,8 @@ class Env {
     dotenv.config({
       path: path.resolve(process.cwd(), envFile),
     });
+
+    this.port = parseInt(process.env.PORT);
   }
 
   getEnvFile(environment: Environment): string {
